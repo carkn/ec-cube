@@ -1,0 +1,210 @@
+name: OWASP ZAP
+on:
+  push:
+    paths:
+      - '**'
+      - '!*.md'
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Container Build
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          tags: ec-cube_ec-cube
+          outputs: type=docker,dest=/tmp/ec-cube.tar
+
+      - name: Upload image
+        uses: actions/upload-artifact@v2
+        with:
+          name: ec-cube
+          path: /tmp/ec-cube.tar
+
+  scan:
+    name: Scan
+    needs: build
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - admin_authority
+          # - admin_content_block
+          # - admin_content_cache
+          # - admin_content_file
+          # - admin_content_layout
+          # - admin_customer_delivery
+          # - admin_customer_edit
+          # - admin_customer_list
+          # - admin_delivery
+          - admin_js_css
+          - admin_log
+          # - admin_mail
+          # - admin_masterdata
+          # - admin_member_edit
+          # - admin_member_setting
+          # - admin_news
+          # - admin_order_edit
+          # - admin_order_edit_search
+          # - admin_order_list
+          # - admin_order_mail
+          # - admin_page
+          # - admin_payment
+          # - admin_product_category
+          # - admin_product_class_name
+          # - admin_product_csv
+          # - admin_product_copy
+          # - admin_product_edit
+          # - admin_product_edit_class
+          # - admin_product_tag
+          # - admin_product_view
+          # - admin_shipping_csv
+          # - admin_shop_setting
+          # - admin_system
+          # - admin_tax
+          # - admin_template
+          # - entry
+          # - front_block
+          # - front_contact
+          # - front_help
+          # - front_mypage
+          # - front_product
+          # - front_sitemap
+          # - guest_cart
+          # - guest_front
+          # - guest_shopping
+          # - guest_shopping_customer_edit
+          # - guest_shopping_shipping_edit
+          # - guest_shopping_shipping_multiple
+          # - mypage_change
+          # - mypage_delivery
+          # - mypage_favorite
+          # - mypage_order
+        include:
+        #   - target: admin_authority
+        #     thread_per_host: 1
+        #   - target: admin_customer_delivery
+        #     before_script: admin_create_customer.zst
+        #   - target: admin_content_cache
+        #     thread_per_host: 1
+          - target: admin_js_css
+            thread_per_host: 1
+        #   - target: admin_mail
+        #     thread_per_host: 1
+        #   - target: admin_masterdata
+        #     thread_per_host: 1
+        #   - target: admin_member_setting
+        #     context: default
+        #   - target: admin_order_edit_search
+        #     before_script: admin_create_customers.zst
+        #   - target: admin_shop_setting
+        #     thread_per_host: 1
+        #   - target: admin_system
+        #     thread_per_host: 1
+        #   - target: admin_template
+        #     thread_per_host: 1
+        #   - target: entry
+        #     thread_per_host: 1
+        #   - target: mypage_delivery
+        #     before_script: admin_create_customer.zst
+        #   - target: mypage_order
+        #     before_script: admin_create_customer.zst
+
+    steps:
+
+      - name: Maximize build space
+        run: |
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Download image
+        uses: actions/download-artifact@v2
+        with:
+          name: ec-cube
+          path: /tmp
+
+      - name: Load image
+        run: |
+          docker load --input /tmp/ec-cube.tar
+
+      - name: Run containers
+        env:
+          APP_ENV: prod
+          APP_DEBUG: 0
+        run: |
+          docker compose -f docker-compose.yml -f docker-compose.pgsql.yml -f docker-compose.owaspzap.ci.yml up -d --wait
+          docker compose cp zap/delete_data.sh postgres:/
+          docker compose exec -d -e PGUSER=dbuser -e PGDATABASE=eccubedb postgres /delete_data.sh
+          docker compose cp zap/delete_files.sh ec-cube:/
+          docker compose exec -d ec-cube /delete_files.sh
+ 
+      - name: Generate automation config
+        env:
+          ZAP_CONTEXT: "${{ matrix.context }}"
+          ZAP_THREAD_PER_HOST: "${{ matrix.thread_per_host }}"
+          ZAP_BEFORE_SCRIPT: "${{ matrix.before_script }}"
+        run: |
+          zap/generate_automation_config.sh \
+            -t ${{ matrix.target }} \
+            ${ZAP_BEFORE_SCRIPT:+"-b ${ZAP_BEFORE_SCRIPT}"} \
+            ${ZAP_CONTEXT:+"-c ${ZAP_CONTEXT}"} \
+            ${ZAP_THREAD_PER_HOST:+"-n ${ZAP_THREAD_PER_HOST}"}
+          cat zap/automation/${{ matrix.target }}.yml
+
+      - name: Autorun
+        run: docker compose exec -it zap ./zap.sh -cmd -configfile /zap/wrk/options.properties -autorun wrk/automation/${{ matrix.target }}.yml
+
+      - name: Copy report
+        if: ${{ always() }}
+        run: |
+          docker compose cp zap:/tmp/report /tmp
+          docker compose cp zap:/tmp/alerts.json /tmp
+
+      - name: Upload report
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: zap-${{ matrix.target }}-report
+          path: /tmp/report
+
+      - name: Upload alerts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: zap-${{ matrix.target }}-report
+          path: /tmp/alerts.json
+
+  merge:
+    name: Merge alerts
+    needs: scan
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+      - name: Display structure of downloaded files
+        run: |
+          find .
+          jq -s add **/alerts.json > all_alerts.json
+        working-directory: artifacts
+      - name: Upload alerts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: all_alerts
+          path: artifacts/all_alerts.json
