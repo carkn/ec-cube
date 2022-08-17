@@ -192,18 +192,19 @@ jobs:
   merge:
     name: Merge alerts
     needs: scan
+    if: ${{ always() }}
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/download-artifact@v3
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
         with:
           path: artifacts
-      - name: Display structure of downloaded files
+      - name: Merge alerts
         run: |
           find .
           jq -s add **/alerts.json > all_alerts.json
         working-directory: artifacts
       - name: Upload alerts
-        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: all_alerts
