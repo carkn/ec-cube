@@ -14,6 +14,7 @@ var alerts = extAlert.getAllAlerts().stream().map(function(a) {
         "attack": a.attack,
         "evidence": a.evidence,
         "risk": a.risk,
+        "method": a.method,
         "confidence": a.confidence
     }
 }).collect(Collectors.toList());
