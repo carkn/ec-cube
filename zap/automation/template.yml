@@ -70,6 +70,12 @@ jobs:
       name: target
       file: /zap/wrk/scripts/__TARGET__.zst
 
+  - type: script
+    parameters:
+      action: run
+      type: sequence
+      name: target
+
   - type: sequence
     parameters:
       action: activeScan
