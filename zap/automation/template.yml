@@ -51,24 +51,15 @@ jobs:
       type: standalone
       name: configure_tech
 
-#  - type: script
-#    parameters:
-#      action: add
-#      type: sequence
-#      name: before_script
-#      file: /zap/wrk/scripts/__BEFORE_SCRIPT__
-#  - type: script
-#    parameters:
-#      action: run
-#      type: sequence
-#      name: before_script
+${ZA_FORCE_ADMIN_CONFIG}
+${ZA_BEFORE_SCRIPT_CONFIG}
 
   - type: script
     parameters:
       action: add
       type: sequence
       name: target
-      file: /zap/wrk/scripts/__TARGET__.zst
+      file: /zap/wrk/scripts/${ZA_TARGET}.zst
 
   - type: script
     parameters:
@@ -80,17 +71,17 @@ jobs:
     parameters:
       action: activeScan
       name: target
-      user: __USER__
-      context: __CONTEXT__
-      threadPerHost: __THREAD_PER_HOST__
+      user: ${ZA_USER}
+      context: ${ZA_CONTEXT}
+      threadPerHost: ${ZA_THREAD_PER_HOST}
 
   - type: passiveScan-wait
 
   - type: report
     parameters:
       reportDir: /tmp/report
-      reportFile: ZAP-Report-__TARGET__
-      reportTitle: __TARGET__
+      reportFile: ZAP-Report-${ZA_TARGET}
+      reportTitle: ${ZA_TARGET}
 
   - type: script
     parameters:

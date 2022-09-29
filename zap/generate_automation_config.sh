@@ -5,46 +5,62 @@ cd $(dirname $0)
 while getopts "t:c:b:n:" OPT
 do
     case $OPT in
-        t) TARGET=${OPTARG} ;;
-        c) CONTEXT=${OPTARG} ;;
-        b) BEFORE_SCRIPT=${OPTARG} ;;
-        n) THREAD_PER_HOST=${OPTARG} ;;
+        t) ZA_TARGET=${OPTARG} ;;
+        c) ZA_CONTEXT=${OPTARG} ;;
+        b) ZA_BEFORE_SCRIPT=${OPTARG} ;;
+        n) ZA_THREAD_PER_HOST=${OPTARG} ;;
     esac
 done
 
-THREAD_PER_HOST=${THREAD_PER_HOST:-10}
+ZA_THREAD_PER_HOST=${ZA_THREAD_PER_HOST:-10}
 
-if [[ -z "${CONTEXT}" ]]; then
-    if [[ ${TARGET} =~ 'admin' ]]; then
-        CONTEXT=admin
-        CONTEXT_USER=admin
+if [[ -z "${ZA_CONTEXT}" ]]; then
+    if [[ ${ZA_TARGET} =~ 'admin' ]]; then
+        ZA_CONTEXT=admin
+        ZA_USER=admin
+        ZA_FORCE_ADMIN_CONFIG="
+  - type: script
+    parameters:
+      action: add
+      type: standalone
+      name: forceuser
+      file: /zap/wrk/scripts/forceuser.groovy
+
+  - type: script
+    parameters:
+      action: run
+      type: standalone
+      name: forceuser
+"
     else
-        CONTEXT=default
+        ZA_CONTEXT=default
     fi
 fi
 
-BEFORE_SCRIPT=$(echo ${BEFORE_SCRIPT} | sed 's/ //g')
+ZA_BEFORE_SCRIPT=$(echo ${ZA_BEFORE_SCRIPT} | sed 's/ //g')
 
 echo "
-CONTEXT: ${CONTEXT}
-CONTEXT_USER: ${CONTEXT_USER}
-THREAD_PER_HOST: ${THREAD_PER_HOST}
-TARGET: ${TARGET}
-BEFORE_SCRIPT: ${BEFORE_SCRIPT}
+CONTEXT: ${ZA_CONTEXT}
+USER: ${ZA_USER}
+THREAD_PER_HOST: ${ZA_THREAD_PER_HOST}
+TARGET: ${ZA_TARGET}
+BEFORE_SCRIPT: ${ZA_BEFORE_SCRIPT}
 "
 
-
-if [[ -n ${BEFORE_SCRIPT} ]]; then
-    REPLACE_COMMENT="s/#//g"
-else
-    REPLACE_COMMENT="s/^#.*$//g"
+if [[ -n ${ZA_BEFORE_SCRIPT} ]]; then
+    ZA_BEFORE_SCRIPT_CONFIG="
+  - type: script
+    parameters:
+      action: add
+      type: sequence
+      name: before_script
+      file: /zap/wrk/scripts/${ZA_BEFORE_SCRIPT}
+  - type: script
+    parameters:
+      action: run
+      type: sequence
+      name: before_script"
 fi
 
-cat automation/template.yml | \
-    sed "s/__TARGET__/${TARGET}/g" | \
-    sed "s/__BEFORE_SCRIPT__/${BEFORE_SCRIPT}/g" | \
-    sed "s/__THREAD_PER_HOST__/${THREAD_PER_HOST}/g" | \
-    sed "s/__CONTEXT__/${CONTEXT}/g" | \
-    sed "s/__USER__/${CONTEXT_USER}/" | \
-    sed ${REPLACE_COMMENT} \
-    > automation/${TARGET}.yml
+TEMPLATE=$(sed 's/"/\\"/g' automation/template.yml)
+eval "echo \"${TEMPLATE}\"" > automation/${ZA_TARGET}.yml
