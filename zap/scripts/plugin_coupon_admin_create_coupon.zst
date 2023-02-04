@@ -1,0 +1,501 @@
+{
+  "about": "This is a Zest script. For more details about Zest visit https://developer.mozilla.org/en-US/docs/Zest",
+  "zestVersion": "0.6",
+  "generatedBy": "Sequence Script Template",
+  "title": "plugin_coupon_admin_create_coupon.zst",
+  "description": "An example empty sequence script. Add requests to populate the sequence.",
+  "prefix": "",
+  "type": "Active",
+  "parameters": {
+    "tokenStart": "{{",
+    "tokenEnd": "}}",
+    "tokens": {},
+    "elementType": "ZestVariables"
+  },
+  "statements": [
+    {
+      "url": "https://ec-cube/admin/plugin/coupon",
+      "data": "",
+      "method": "GET",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 52,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429891436,
+      "cookies": [],
+      "index": 1,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "comment": "クーポン新規作成",
+      "index": 2,
+      "enabled": true,
+      "elementType": "ZestComment"
+    },
+    {
+      "minInt": 0,
+      "maxInt": 2147483647,
+      "variableName": "coupon-code-id",
+      "index": 3,
+      "enabled": true,
+      "elementType": "ZestAssignRandomInteger"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon/new",
+      "data": "",
+      "method": "GET",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/new",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 69,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429893571,
+      "cookies": [],
+      "index": 4,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "prefix": "\u003cmeta name\u003d\"eccube-csrf-token\" content\u003d\"",
+      "postfix": "\"\u003e",
+      "location": "BODY",
+      "variableName": "eccube-csrf-token",
+      "index": 5,
+      "enabled": true,
+      "elementType": "ZestAssignStringDelimiters"
+    },
+    {
+      "fieldDefinition": {
+        "formIndex": 0,
+        "fieldName": "coupon__token",
+        "elementType": "ZestFieldDefinition"
+      },
+      "variableName": "csrf1",
+      "index": 6,
+      "enabled": true,
+      "elementType": "ZestAssignFieldValue"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon/search/category",
+      "data": "category_id\u003d2\u0026exist_category_id\u003d",
+      "method": "POST",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 31\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/search/category",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 52,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675434466545,
+      "cookies": [],
+      "index": 7,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon/search/product",
+      "data": "id\u003d%E3%82%B8%E3%82%A7%E3%83%A9%E3%83%BC%E3%83%88\u0026category_id\u003d1\u0026exist_product_id\u003d",
+      "method": "POST",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 80\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/search/product",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 116,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675434493015,
+      "cookies": [],
+      "index": 8,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon/new",
+      "data": "mode\u003d\u0026coupon%5B_token%5D\u003d{{csrf1}}\u0026coupon%5Bcoupon_cd%5D\u003dowaspzap{{coupon-code-id}}\u0026coupon%5Bcoupon_name%5D\u003dowaspzap\u0026coupon%5Bcoupon_type%5D\u003d3\u0026coupon%5Bcoupon_member%5D\u003d0\u0026coupon%5Bdiscount_type%5D\u003d1\u0026coupon%5Bdiscount_price%5D\u003d100\u0026coupon%5Bcoupon_release%5D\u003d1000\u0026coupon%5Bcoupon_use_time%5D\u003d\u0026coupon_release_old\u003d\u0026coupon%5Bcoupon_lower_limit%5D\u003d1000\u0026coupon%5Bavailable_from_date%5D\u003d2023-02-01\u0026coupon%5Bavailable_to_date%5D\u003d2100-12-31",
+      "method": "POST",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 525\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/new",
+        "headers": "",
+        "body": "",
+        "statusCode": 302,
+        "responseTimeInMs": 98,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 302,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429963841,
+      "cookies": [],
+      "index": 9,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "comment": "編集",
+      "index": 10,
+      "enabled": true,
+      "elementType": "ZestComment"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon",
+      "data": "",
+      "method": "GET",
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 70,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429963945,
+      "cookies": [],
+      "index": 11,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "prefix": "\u003ctd class\u003d\"coupon_id\"\u003e",
+      "postfix": "\u003c/td\u003e",
+      "location": "BODY",
+      "variableName": "coupon-id",
+      "index": 12,
+      "enabled": true,
+      "elementType": "ZestAssignStringDelimiters"
+    },
+    {
+      "urlToken": "https://ec-cube/admin/plugin/coupon/{{coupon-id}}/edit",
+      "data": "",
+      "method": "GET",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/19/edit",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 81,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675435035437,
+      "cookies": [],
+      "index": 13,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "fieldDefinition": {
+        "formIndex": 0,
+        "fieldName": "coupon__token",
+        "elementType": "ZestFieldDefinition"
+      },
+      "variableName": "csrf2",
+      "index": 14,
+      "enabled": true,
+      "elementType": "ZestAssignFieldValue"
+    },
+    {
+      "urlToken": "https://ec-cube/admin/plugin/coupon/{{coupon-id}}/edit",
+      "data": "mode\u003d\u0026coupon%5B_token%5D\u003d{{csrf2}}\u0026coupon%5Bcoupon_cd%5D\u003dowaspzap{{coupon-id}}\u0026coupon%5Bcoupon_name%5D\u003dowaspzap\u0026coupon%5Bcoupon_type%5D\u003d3\u0026coupon%5Bcoupon_member%5D\u003d0\u0026coupon%5Bdiscount_type%5D\u003d1\u0026coupon%5Bdiscount_price%5D\u003d100\u0026coupon%5Bcoupon_release%5D\u003d1000\u0026coupon%5Bcoupon_use_time%5D\u003d1000\u0026coupon_release_old\u003d1000\u0026coupon%5Bcoupon_lower_limit%5D\u003d1%2C000\u0026coupon%5Bavailable_from_date%5D\u003d2023-02-01\u0026coupon%5Bavailable_to_date%5D\u003d2100-12-31",
+      "method": "POST",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 531\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/19/edit",
+        "headers": "",
+        "body": "",
+        "statusCode": 302,
+        "responseTimeInMs": 91,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 302,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675435038149,
+      "cookies": [],
+      "index": 15,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "comment": "無効にする",
+      "index": 16,
+      "enabled": true,
+      "elementType": "ZestComment"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon",
+      "data": "",
+      "method": "GET",
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 54,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675435038249,
+      "cookies": [],
+      "index": 17,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "prefix": "token-for-anchor\u003d\u0027",
+      "postfix": "\u0027 data-confirm",
+      "location": "BODY",
+      "variableName": "token",
+      "index": 18,
+      "enabled": true,
+      "elementType": "ZestAssignStringDelimiters"
+    },
+    {
+      "urlToken": "https://ec-cube/admin/plugin/coupon/{{coupon-id}}/enable",
+      "data": "_token\u003d{{token}}\u0026_method\u003dput",
+      "method": "POST",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 148\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/1/enable",
+        "headers": "",
+        "body": "",
+        "statusCode": 302,
+        "responseTimeInMs": 69,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 302,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429974156,
+      "cookies": [],
+      "index": 19,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon",
+      "data": "",
+      "method": "GET",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 52,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429891436,
+      "cookies": [],
+      "index": 20,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "prefix": "token-for-anchor\u003d\u0027",
+      "postfix": "\u0027 data-confirm",
+      "location": "BODY",
+      "variableName": "token2",
+      "index": 21,
+      "enabled": true,
+      "elementType": "ZestAssignStringDelimiters"
+    },
+    {
+      "comment": "有効にする",
+      "index": 22,
+      "enabled": true,
+      "elementType": "ZestComment"
+    },
+    {
+      "urlToken": "https://ec-cube/admin/plugin/coupon/{{coupon-id}}/enable",
+      "data": "_token\u003d{{token2}}\u0026_method\u003dput",
+      "method": "POST",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 148\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon/1/enable",
+        "headers": "",
+        "body": "",
+        "statusCode": 302,
+        "responseTimeInMs": 69,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 302,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429974156,
+      "cookies": [],
+      "index": 23,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    },
+    {
+      "url": "https://ec-cube/admin/plugin/coupon",
+      "data": "",
+      "method": "GET",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "response": {
+        "url": "https://ec-cube/admin/plugin/coupon",
+        "headers": "",
+        "body": "",
+        "statusCode": 200,
+        "responseTimeInMs": 52,
+        "elementType": "ZestResponse"
+      },
+      "assertions": [
+        {
+          "rootExpression": {
+            "code": 200,
+            "not": false,
+            "elementType": "ZestExpressionStatusCode"
+          },
+          "elementType": "ZestAssertion"
+        }
+      ],
+      "followRedirects": false,
+      "timestamp": 1675429891436,
+      "cookies": [],
+      "index": 24,
+      "enabled": true,
+      "elementType": "ZestRequest"
+    }
+  ],
+  "authentication": [],
+  "index": 0,
+  "enabled": true,
+  "elementType": "ZestScript"
+}
