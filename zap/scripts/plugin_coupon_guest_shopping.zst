@@ -30,7 +30,7 @@
       "url": "https://ec-cube/products/detail/1",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: none\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: none\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -49,8 +49,8 @@
       "elementType": "ZestRequest"
     },
     {
-      "prefix": "\u003cmeta name\u003d\"eccube-csrf-token\" content\u003d\"",
-      "postfix": "\"\u003e",
+      "prefix": "<meta name=\"eccube-csrf-token\" content=\"",
+      "postfix": "\">",
       "location": "BODY",
       "variableName": "ajax-token",
       "index": 4,
@@ -77,9 +77,9 @@
     {
       "url": "https://ec-cube/products/add_cart/1",
       "urlToken": "https://ec-cube/products/add_cart/1",
-      "data": "classcategory_id1\u003d1\u0026classcategory_id2\u003d4\u0026quantity\u003d1\u0026product_id\u003d1\u0026ProductClass\u003d10\u0026_token\u003d{{csrf1}}",
+      "data": "classcategory_id1=1&classcategory_id2=4&quantity=1&product_id=1&ProductClass=10&_token={{csrf1}}",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 130\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: 72IFkBPt4MOTg5fPDVEhdaZy-rzqYRmZIjNpniKRPuI\r\nContent-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"Linux\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 130\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: 72IFkBPt4MOTg5fPDVEhdaZy-rzqYRmZIjNpniKRPuI\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"Linux\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -101,7 +101,7 @@
       "url": "https://ec-cube/block/cart",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: 72IFkBPt4MOTg5fPDVEhdaZy-rzqYRmZIjNpniKRPuI\r\nsec-ch-ua-platform: \"Linux\"\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: 72IFkBPt4MOTg5fPDVEhdaZy-rzqYRmZIjNpniKRPuI\r\nsec-ch-ua-platform: \"Linux\"\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -129,7 +129,7 @@
       "url": "https://ec-cube/cart",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -148,8 +148,8 @@
       "elementType": "ZestRequest"
     },
     {
-      "prefix": "href\u003d\"/cart/buystep/",
-      "postfix": "\"\u003eレジに進む\u003c/a\u003e",
+      "prefix": "href=\"/cart/buystep/",
+      "postfix": "\">レジに進む</a>",
       "location": "BODY",
       "variableName": "cartid",
       "index": 11,
@@ -166,7 +166,7 @@
       "urlToken": "https://ec-cube/cart/buystep/{{cartid}}",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -188,7 +188,7 @@
       "url": "https://ec-cube/shopping",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -216,7 +216,7 @@
       "url": "https://ec-cube/shopping/login",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -249,7 +249,7 @@
       "url": "https://ec-cube/shopping/nonmember",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -288,9 +288,9 @@
     },
     {
       "url": "https://ec-cube/shopping/nonmember",
-      "data": "nonmember%5B_token%5D\u003d{{csrf3}}\u0026nonmember%5Bname%5D%5Bname01%5D\u003d%E5%A7%93\u0026nonmember%5Bname%5D%5Bname02%5D\u003d%E5%90%8D\u0026nonmember%5Bkana%5D%5Bkana01%5D\u003d%E3%82%BB%E3%82%A4\u0026nonmember%5Bkana%5D%5Bkana02%5D\u003d%E3%83%A1%E3%82%A4\u0026nonmember%5Bcompany_name%5D\u003d%E4%BC%9A%E7%A4%BE%E5%90%8D\u0026nonmember%5Bpostal_code%5D\u003d5300001\u0026nonmember%5Baddress%5D%5Bpref%5D\u003d27\u0026nonmember%5Baddress%5D%5Baddr01%5D\u003d%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%A2%85%E7%94%B0\u0026nonmember%5Baddress%5D%5Baddr02%5D\u003d1-2-3\u0026nonmember%5Bphone_number%5D\u003d08012345678\u0026nonmember%5Bemail%5D%5Bfirst%5D\u003da{{mail-id}}%40a.a\u0026nonmember%5Bemail%5D%5Bsecond%5D\u003da{{mail-id}}%40a.a",
+      "data": "nonmember%5B_token%5D={{csrf3}}&nonmember%5Bname%5D%5Bname01%5D=%E5%A7%93&nonmember%5Bname%5D%5Bname02%5D=%E5%90%8D&nonmember%5Bkana%5D%5Bkana01%5D=%E3%82%BB%E3%82%A4&nonmember%5Bkana%5D%5Bkana02%5D=%E3%83%A1%E3%82%A4&nonmember%5Bcompany_name%5D=%E4%BC%9A%E7%A4%BE%E5%90%8D&nonmember%5Bpostal_code%5D=5300001&nonmember%5Baddress%5D%5Bpref%5D=27&nonmember%5Baddress%5D%5Baddr01%5D=%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%A2%85%E7%94%B0&nonmember%5Baddress%5D%5Baddr02%5D=1-2-3&nonmember%5Bphone_number%5D=08012345678&nonmember%5Bemail%5D%5Bfirst%5D=a{{mail-id}}%40a.a&nonmember%5Bemail%5D%5Bsecond%5D=a{{mail-id}}%40a.a",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 639\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 639\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -312,7 +312,7 @@
       "url": "https://ec-cube/shopping",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -331,8 +331,8 @@
       "elementType": "ZestRequest"
     },
     {
-      "prefix": "data-path\u003d\"/shopping/shipping_edit/",
-      "postfix": "\"\u003e",
+      "prefix": "data-path=\"/shopping/shipping_edit/",
+      "postfix": "\">",
       "location": "BODY",
       "variableName": "shipping-id",
       "index": 23,
@@ -351,8 +351,8 @@
       "elementType": "ZestAssignFieldValue"
     },
     {
-      "prefix": "\u003cmeta name\u003d\"eccube-csrf-token\" content\u003d\"",
-      "postfix": "\"\u003e",
+      "prefix": "<meta name=\"eccube-csrf-token\" content=\"",
+      "postfix": "\">",
       "location": "BODY",
       "variableName": "eccube-csrf-token",
       "index": 25,
@@ -367,17 +367,9 @@
     },
     {
       "url": "https://ec-cube/shopping/redirect_to",
-      "data": "_shopping_order%5B_token%5D\u003d{{csrf4}}\u0026_shopping_order%5Bredirect_to%5D\u003d\u0026customer_name01\u003d%E3%81%92%E3%81%99%E3%81%A8\u0026customer_name02\u003d%E3%81%9F%E3%82%8D%E3%81%86\u0026customer_kana01\u003d%E3%82%B2%E3%82%B9%E3%83%88\u0026customer_kana02\u003d%E3%82%BF%E3%83%AD%E3%82%A6\u0026customer_company_name\u003d\u0026customer_postal_code\u003d1000000\u0026customer_pref\u003d%E6%9D%B1%E4%BA%AC%E9%83%BD\u0026customer_addr01\u003d%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA\u0026customer_addr02\u003d123\u0026customer_phone_number\u003d09012345678\u0026customer_email\u003dguest%40example.com\u0026_shopping_order%5BShippings%5D%5B0%5D%5BDelivery%5D\u003d1\u0026_shopping_order%5BShippings%5D%5B0%5D%5Bshipping_delivery_date%5D\u003d\u0026_shopping_order%5BShippings%5D%5B0%5D%5BDeliveryTime%5D\u003d\u0026_shopping_order%5BPayment%5D\u003d1\u0026_shopping_order%5Bmessage%5D\u003d",
+      "data": "_shopping_order%5B_token%5D={{csrf4}}&_shopping_order%5Bredirect_to%5D=&customer_name01=%E3%81%92%E3%81%99%E3%81%A8&customer_name02=%E3%81%9F%E3%82%8D%E3%81%86&customer_kana01=%E3%82%B2%E3%82%B9%E3%83%88&customer_kana02=%E3%82%BF%E3%83%AD%E3%82%A6&customer_company_name=&customer_postal_code=1000000&customer_pref=%E6%9D%B1%E4%BA%AC%E9%83%BD&customer_addr01=%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA&customer_addr02=123&customer_phone_number=09012345678&customer_email=guest%40example.com&_shopping_order%5BShippings%5D%5B0%5D%5BDelivery%5D=1&_shopping_order%5BShippings%5D%5B0%5D%5Bshipping_delivery_date%5D=&_shopping_order%5BShippings%5D%5B0%5D%5BDeliveryTime%5D=&_shopping_order%5BPayment%5D=1&_shopping_order%5Bmessage%5D=",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 818\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
-      "response": {
-        "url": "https://ec-cube/shopping/redirect_to",
-        "headers": "",
-        "body": "",
-        "statusCode": 302,
-        "responseTimeInMs": 113,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 818\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -399,15 +391,7 @@
       "url": "https://ec-cube/shopping",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: 7e9756456d7836e7692a3.lO3A3p4MI9z8M9wArcuAxlJYVlE6SjB5MDQDEwJEHD4.0biusP9qRuqXA69oxbvi9RY5ImdWAFQvYmFUS3ghLF3CmbKPwXVm7cR0lQ\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
-      "response": {
-        "url": "https://ec-cube/shopping",
-        "headers": "",
-        "body": "",
-        "statusCode": 200,
-        "responseTimeInMs": 113,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: 7e9756456d7836e7692a3.lO3A3p4MI9z8M9wArcuAxlJYVlE6SjB5MDQDEwJEHD4.0biusP9qRuqXA69oxbvi9RY5ImdWAFQvYmFUS3ghLF3CmbKPwXVm7cR0lQ\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -440,15 +424,7 @@
       "url": "https://ec-cube/plugin/coupon/shopping/shopping_coupon",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
-      "response": {
-        "url": "https://ec-cube/plugin/coupon/shopping/shopping_coupon",
-        "headers": "",
-        "body": "",
-        "statusCode": 200,
-        "responseTimeInMs": 118,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -479,17 +455,9 @@
     },
     {
       "url": "https://ec-cube/plugin/coupon/shopping/shopping_coupon",
-      "data": "coupon_use%5B_token%5D\u003d{{csrf6}}\u0026coupon_use%5Bcoupon_use%5D\u003d1\u0026coupon_use%5Bcoupon_cd%5D\u003d{{coupon-cd}}",
+      "data": "coupon_use%5B_token%5D={{csrf6}}&coupon_use%5Bcoupon_use%5D=1&coupon_use%5Bcoupon_cd%5D={{coupon-cd}}",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 210\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
-      "response": {
-        "url": "https://ec-cube/plugin/coupon/shopping/shopping_coupon",
-        "headers": "",
-        "body": "",
-        "statusCode": 302,
-        "responseTimeInMs": 71,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 210\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -511,15 +479,7 @@
       "url": "https://ec-cube/shopping",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\n",
-      "response": {
-        "url": "https://ec-cube/shopping",
-        "headers": "",
-        "body": "",
-        "statusCode": 200,
-        "responseTimeInMs": 134,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -556,9 +516,9 @@
     },
     {
       "url": "https://ec-cube/shopping/confirm",
-      "data": "_shopping_order%5B_token%5D\u003d{{csrf7}}\u0026_shopping_order%5Bredirect_to%5D\u003d\u0026customer_name01\u003d%E5%A7%93\u0026customer_name02\u003d%E5%90%8D\u0026customer_kana01\u003d%E3%82%BB%E3%82%A4\u0026customer_kana02\u003d%E3%83%A1%E3%82%A4\u0026customer_company_name\u003d%E4%BC%9A%E7%A4%BE%E5%90%8D\u0026customer_postal_code\u003d5300001\u0026customer_pref\u003d%E5%A4%A7%E9%98%AA%E5%BA%9C\u0026customer_addr01\u003d%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%A2%85%E7%94%B0\u0026customer_addr02\u003d1-2-3\u0026customer_phone_number\u003d08012345678\u0026customer_email\u003da%40a.a\u0026_shopping_order%5BShippings%5D%5B0%5D%5BDelivery%5D\u003d1\u0026_shopping_order%5BShippings%5D%5B0%5D%5Bshipping_delivery_date%5D\u003d\u0026_shopping_order%5BShippings%5D%5B0%5D%5BDeliveryTime%5D\u003d\u0026_shopping_order%5BShippings%5D%5B1%5D%5BDelivery%5D\u003d1\u0026_shopping_order%5BShippings%5D%5B1%5D%5Bshipping_delivery_date%5D\u003d\u0026_shopping_order%5BShippings%5D%5B1%5D%5BDeliveryTime%5D\u003d\u0026_shopping_order%5BPayment%5D\u003d2\u0026_shopping_order%5Bmessage%5D\u003d%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B",
+      "data": "_shopping_order%5B_token%5D={{csrf7}}&_shopping_order%5Bredirect_to%5D=&customer_name01=%E5%A7%93&customer_name02=%E5%90%8D&customer_kana01=%E3%82%BB%E3%82%A4&customer_kana02=%E3%83%A1%E3%82%A4&customer_company_name=%E4%BC%9A%E7%A4%BE%E5%90%8D&customer_postal_code=5300001&customer_pref=%E5%A4%A7%E9%98%AA%E5%BA%9C&customer_addr01=%E5%A4%A7%E9%98%AA%E5%B8%82%E5%8C%97%E5%8C%BA%E6%A2%85%E7%94%B0&customer_addr02=1-2-3&customer_phone_number=08012345678&customer_email=a%40a.a&_shopping_order%5BShippings%5D%5B0%5D%5BDelivery%5D=1&_shopping_order%5BShippings%5D%5B0%5D%5Bshipping_delivery_date%5D=&_shopping_order%5BShippings%5D%5B0%5D%5BDeliveryTime%5D=&_shopping_order%5BPayment%5D=2&_shopping_order%5Bmessage%5D=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 978\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 978\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -590,9 +550,9 @@
     {
       "url": "https://ec-cube/shopping/checkout",
       "urlToken": "https://ec-cube/shopping/checkout",
-      "data": "_shopping_order%5B_token%5D\u003d{{csrf12}}",
+      "data": "_shopping_order%5B_token%5D={{csrf12}}",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 71\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 71\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: application/x-www-form-urlencoded\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -614,7 +574,7 @@
       "url": "https://ec-cube/shopping/complete",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v\u003d\"99\", \"Chromium\";v\u003d\"102\", \"Google Chrome\";v\u003d\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"102\", \"Google Chrome\";v=\"102\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"Linux\"\r\n",
       "assertions": [
         {
           "rootExpression": {
