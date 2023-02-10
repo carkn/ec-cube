@@ -23,31 +23,13 @@
       "url": "https://ec-cube/admin/product/product/2/edit",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
-      "response": {
-        "url": "https://ec-cube/admin/product/product/2/edit",
-        "headers": "",
-        "body": "",
-        "statusCode": 200,
-        "responseTimeInMs": 118,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
             "code": 200,
             "not": false,
             "elementType": "ZestExpressionStatusCode"
-          },
-          "elementType": "ZestAssertion"
-        },
-        {
-          "rootExpression": {
-            "length": 97146,
-            "approx": 1,
-            "variableName": "response.body",
-            "not": false,
-            "elementType": "ZestExpressionLength"
           },
           "elementType": "ZestAssertion"
         }
@@ -71,8 +53,8 @@
       "elementType": "ZestAssignFieldValue"
     },
     {
-      "prefix": "\u003cmeta name\u003d\"eccube-csrf-token\" content\u003d\"",
-      "postfix": "\"\u003e",
+      "prefix": "<meta name=\"eccube-csrf-token\" content=\"",
+      "postfix": "\">",
       "location": "BODY",
       "variableName": "eccube-csrf-token",
       "index": 4,
@@ -87,17 +69,9 @@
     },
     {
       "url": "https://ec-cube/admin/related_product/search/product",
-      "data": "id\u003d1\u0026category_id\u003d1\u0026product_id\u003d2",
+      "data": "id=1&category_id=1&product_id=2",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 29\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
-      "response": {
-        "url": "https://ec-cube/admin/related_product/search/product",
-        "headers": "",
-        "body": "",
-        "statusCode": 200,
-        "responseTimeInMs": 73,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 29\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -117,17 +91,9 @@
     },
     {
       "url": "https://ec-cube/admin/related_product/search/product/page/1",
-      "data": "id\u003d1\u0026category_id\u003d1\u0026product_id\u003d2",
+      "data": "id=1&category_id=1&product_id=2",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 29\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
-      "response": {
-        "url": "https://ec-cube/admin/related_product/search/product",
-        "headers": "",
-        "body": "",
-        "statusCode": 200,
-        "responseTimeInMs": 73,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 29\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nECCUBE-CSRF-TOKEN: {{eccube-csrf-token}}\r\nContent-Type: application/x-www-form-urlencoded; charset=UTF-8\r\nX-Requested-With: XMLHttpRequest\r\nsec-ch-ua-platform: \"macOS\"\r\nOrigin: https://ec-cube\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: cors\r\nSec-Fetch-Dest: empty\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -153,17 +119,9 @@
     },
     {
       "url": "https://ec-cube/admin/product/product/2/edit",
-      "data": "------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[_token]\"\r\n\r\n{{csrf1}}\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[return_link]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[name]\"\r\n\r\nãã§ãªã¼ã¢ã¤ã¹ãµã³ã\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[class][sale_type]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[product_image][]\"\r\n\r\nsand-1.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[product_image][]\"\r\n\r\nsand-2.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[product_image][]\"\r\n\r\nsand-3.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[images][0]\"\r\n\r\nsand-1.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[images][1]\"\r\n\r\nsand-2.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[images][2]\"\r\n\r\nsand-3.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[description_detail]\"\r\n\r\nãã§ãªã¼ã¢ã¤ã¹ãµã³ãã¯åæµ·éç£ã®ãã§ãªã¼ã®ã¢ã¤ã¹ããµã¯ãµã¯ã®ã¯ãã­ã¼ã§ãµã³ãããã¹ã¤ã¼ãã§ããç«æ¹ä½ãªã®ã§å¤§éã«æã¡éã¶ã¨ããä¾¿å©ã§ãã\r\nãã¾ã ããé ä¸ãªç®±ã¤ãã§ãã\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[description_list]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[class][price02]\"\r\n\r\n2,800\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[class][price01]\"\r\n\r\n3,000\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[class][stock]\"\r\n\r\n100\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[search_word]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[class][code]\"\r\n\r\nsand-01\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[class][sale_limit]\"\r\n\r\n5\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[class][delivery_duration]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[free_area]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][0][ChildProduct]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][0][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][1][ChildProduct]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][1][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][2][ChildProduct]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][2][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][3][ChildProduct]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][3][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][4][ChildProduct]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][4][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][5][ChildProduct]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[RelatedProducts][5][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[Category][]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[Category][]\"\r\n\r\n5\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[Category][]\"\r\n\r\n6\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[note]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name\u003d\"admin_product[Status]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE--\r\n",
+      "data": "------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[_token]\"\r\n\r\n{{csrf1}}\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[return_link]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[name]\"\r\n\r\nãã§ãªã¼ã¢ã¤ã¹ãµã³ã\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[class][sale_type]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[product_image][]\"\r\n\r\nsand-1.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[product_image][]\"\r\n\r\nsand-2.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[product_image][]\"\r\n\r\nsand-3.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[images][0]\"\r\n\r\nsand-1.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[images][1]\"\r\n\r\nsand-2.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[images][2]\"\r\n\r\nsand-3.png\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[description_detail]\"\r\n\r\nãã§ãªã¼ã¢ã¤ã¹ãµã³ãã¯åæµ·éç£ã®ãã§ãªã¼ã®ã¢ã¤ã¹ããµã¯ãµã¯ã®ã¯ãã­ã¼ã§ãµã³ãããã¹ã¤ã¼ãã§ããç«æ¹ä½ãªã®ã§å¤§éã«æã¡éã¶ã¨ããä¾¿å©ã§ãã\r\nãã¾ã ããé ä¸ãªç®±ã¤ãã§ãã\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[description_list]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[class][price02]\"\r\n\r\n2,800\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[class][price01]\"\r\n\r\n3,000\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[class][stock]\"\r\n\r\n100\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[search_word]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[class][code]\"\r\n\r\nsand-01\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[class][sale_limit]\"\r\n\r\n5\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[class][delivery_duration]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[free_area]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][0][ChildProduct]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][0][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][1][ChildProduct]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][1][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][2][ChildProduct]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][2][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][3][ChildProduct]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][3][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][4][ChildProduct]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][4][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][5][ChildProduct]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[RelatedProducts][5][content]\"\r\n\r\ndescription\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[Category][]\"\r\n\r\n2\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[Category][]\"\r\n\r\n5\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[Category][]\"\r\n\r\n6\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[note]\"\r\n\r\n\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nContent-Disposition: form-data; name=\"admin_product[Status]\"\r\n\r\n1\r\n------WebKitFormBoundaryG8dHPB7WBPYRGBPE--\r\n",
       "method": "POST",
-      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 5017\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: multipart/form-data; boundary\u003d----WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
-      "response": {
-        "url": "https://ec-cube/admin/product/product/2/edit",
-        "headers": "",
-        "body": "",
-        "statusCode": 302,
-        "responseTimeInMs": 195,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nContent-Length: 5017\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\nUpgrade-Insecure-Requests: 1\r\nOrigin: https://ec-cube\r\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundaryG8dHPB7WBPYRGBPE\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\n",
       "assertions": [
         {
           "rootExpression": {
@@ -185,15 +143,7 @@
       "url": "https://ec-cube/admin/product/product/2/edit",
       "data": "",
       "method": "GET",
-      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \"Not_A Brand\";v\u003d\"99\", \"Google Chrome\";v\u003d\"109\", \"Chromium\";v\u003d\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\n",
-      "response": {
-        "url": "https://ec-cube/admin/product/product/2/edit",
-        "headers": "",
-        "body": "",
-        "statusCode": 200,
-        "responseTimeInMs": 329,
-        "elementType": "ZestResponse"
-      },
+      "headers": "Proxy-Connection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Site: same-origin\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-User: ?1\r\nSec-Fetch-Dest: document\r\nsec-ch-ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"\r\nsec-ch-ua-mobile: ?0\r\nsec-ch-ua-platform: \"macOS\"\r\n",
       "assertions": [
         {
           "rootExpression": {
