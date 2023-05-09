@@ -1,7 +1,17 @@
 name: Penetration testing for EC-CUBE
 on:
-  schedule:
-    - cron: '0 15 * * 1'
+  push:
+    branches:
+      - '*'
+    tags:
+      - '*'
+    paths:
+      - '**'
+      - '!*.md'
+  pull_request:
+    paths:
+      - '**'
+      - '!*.md'
 
 jobs:
   PenetrationTest:
