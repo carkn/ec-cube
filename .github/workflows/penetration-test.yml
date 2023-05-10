@@ -51,6 +51,7 @@ jobs:
           docker compose -f docker-compose.yml -f docker-compose.pgsql.yml -f docker-compose.dev.yml -f docker-compose.owaspzap.yml -f docker-compose.owaspzap.daemon.yml up -d
           docker exec ec-cube-ec-cube-1 find vendor/
           docker exec ec-cube-ec-cube-1 ls vendor/
+          docker exec ec-cube-ec-cube-1 ls vendor/
           docker compose -f docker-compose.yml -f docker-compose.pgsql.yml -f docker-compose.dev.yml -f docker-compose.owaspzap.yml -f docker-compose.owaspzap.daemon.yml exec -T ec-cube  bin/console doctrine:schema:create --env=dev
           echo wordpress2
           docker compose -f docker-compose.yml -f docker-compose.pgsql.yml -f docker-compose.dev.yml -f docker-compose.owaspzap.yml -f docker-compose.owaspzap.daemon.yml exec -T ec-cube  bin/console eccube:fixtures:load --env=dev
