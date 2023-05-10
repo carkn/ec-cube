@@ -49,7 +49,7 @@ jobs:
           sudo chown -R 1001:1000 zap
           sudo chmod -R g+w zap
           docker compose -f docker-compose.yml -f docker-compose.pgsql.yml -f docker-compose.dev.yml -f docker-compose.owaspzap.yml -f docker-compose.owaspzap.daemon.yml up -d
-          echo wordpress1
+          docker exec -it ec-cube-ec-cube-1 find vender/
           docker compose -f docker-compose.yml -f docker-compose.pgsql.yml -f docker-compose.dev.yml -f docker-compose.owaspzap.yml -f docker-compose.owaspzap.daemon.yml exec -T ec-cube  bin/console doctrine:schema:create --env=dev
           echo wordpress2
           docker compose -f docker-compose.yml -f docker-compose.pgsql.yml -f docker-compose.dev.yml -f docker-compose.owaspzap.yml -f docker-compose.owaspzap.daemon.yml exec -T ec-cube  bin/console eccube:fixtures:load --env=dev
