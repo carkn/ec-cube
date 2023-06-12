@@ -1,7 +1,7 @@
 #!/bin/bash
 
 php bin/template_jp.php
-rm -rf app/Plugin/*
+#rm -rf app/Plugin/*
 echo '<?php
 namespace Eccube\Doctrine\EventSubscriber;
 use Doctrine\Common\EventSubscriber;
