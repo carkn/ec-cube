@@ -171,7 +171,7 @@ jobs:
           docker compose cp zap/delete_files.sh ec-cube:/
           docker compose exec -d ec-cube /delete_files.sh
           docker compose cp zap/add_CancelDeletionEventSubscriber.sh ec-cube:/
-          docker compose exec -d ec-cube /add_CancelDeletionEventSubscriber.sh
+          docker compose exec ec-cube /add_CancelDeletionEventSubscriber.sh
 
       - name: Set up plugins
         env:
